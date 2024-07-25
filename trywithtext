@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOTEL SERPENT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HOTEL SERPENT</h1>
+        <form class="passform" onsubmit="return passcheck()">
+            <input type="password" required id="pass1" placeholder="Enter password">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function passcheck(){
+            var password = document.getElementById('pass1').value;
+            if(password === "venom"){
+                alert('Correct Password. Redirecting to snake.html.');
+                window.location.href = "snake.html";
+                return false; // Prevent form submission
+            } else if(password === "bird"){
+                alert('Correct Password. Redirecting to bird.html.');
+                window.location.href = "bird.html";
+                return false; // Prevent form submission
+            } else {
+                alert('맞는 열쇠가 아닙니다');
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
